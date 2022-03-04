@@ -1,0 +1,1 @@
+All data folders, e.g. IRMAS-TrainingData should go in this dir
