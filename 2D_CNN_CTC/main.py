@@ -63,7 +63,7 @@ def encode_single_sample(wav_file, label):
     return spectrogram, label
 
 for label in characters:
-  wav_files = glob.glob("../data/" + glob.escape("IRMAS-TrainingData") + "/" + label + "/*.wav")
+  wav_files = glob.glob("./data/" + glob.escape("IRMAS-TrainingData") + "/" + label + "/*.wav")
 
   for file in wav_files:
     rand = random.randint(0, 100)
