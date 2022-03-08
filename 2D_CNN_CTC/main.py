@@ -7,6 +7,7 @@ from tensorflow.keras import layers
 import matplotlib.pyplot as plt
 from IPython import display
 import glob
+import os
 
 # An integer scalar Tensor. The window length in samples.
 frame_length = 256
@@ -63,8 +64,7 @@ def encode_single_sample(wav_file, label):
     return spectrogram, label
 
 for label in characters:
-  wav_files = glob.glob("./data/" + glob.escape("IRMAS-TrainingData") + "/" + label + "/*.wav")
-
+  wav_files = glob.glob("./Project/Machine-Learning-Instrument-Recognition/data/IRMAS-TrainingData/" + glob.escape("IRMAS-TrainingData") + "/" + label + "/*.wav")
   for file in wav_files:
     rand = random.randint(0, 100)
     
@@ -241,9 +241,9 @@ class CallbackEval(keras.callbacks.Callback):
                     tf.strings.reduce_join(num_to_char(label)).numpy().decode("utf-8")
                 )
                 targets.append(label)
-        wer_score = wer(targets, predictions)
+        # wer_score = wer(targets, predictions)
         print("-" * 100)
-        print(f"Word Error Rate: {wer_score:.4f}")
+        # print(f"Word Error Rate: {wer_score:.4f}")
         print("-" * 100)
         for i in np.random.randint(0, len(predictions), 2):
             print(f"Target    : {targets[i]}")
