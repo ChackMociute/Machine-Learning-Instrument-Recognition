@@ -2,4 +2,4 @@ data/*/**
 Course\ files/
 .ipynb_checkpoints/
 worksheets/
-jupyterlab/model/
+jupyterlab/Models/
