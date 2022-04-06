@@ -1,5 +1,5 @@
 # Machine Learning Instrument Recognition
-## Project for the course Machine Learning in which we attempt to create a neural network for instrument recognition in audio
+Project for the course Machine Learning in which we attempt to create a neural network for instrument recognition in audio
 
 # Acknowledgements
 This project is built upon using the IRMAS dataset created by Bosh et al. and is only used for academic purposes
